@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="KO">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>01_CSS개요,CSS선택자1</title>
+
+    <STYle>
+
+
+
+        /*css영역*/
+        /*style 태그 : css코드만 작성할수 있는 영역을 제공하는 태그 */
+   div{
+    border: 3px solid red;
+    /* 테두리 : 3px 두께의 실선*/
+   }
+
+   strong{
+    background-color:  yellow;
+
+   }
+    
+    span{
+        background-color: pink;
+    }
+    
+    /*id선택자*/
+
+    #li-1{
+
+        background-color: red;
+    }
+    #li-2{
+
+        background-color: orange;
+    }
+    #li-3{
+        
+        background-color: yellow;
+    }
+    #li-4{
+        
+        background-color: green;
+    }
+    #li-5{
+        
+        background-color: blue;
+    }
+    
+    /*클래스 선택자*/
+    
+    .test-1 {
+        background-color: black;
+        color: white;
+    }
+    .test-2 {
+        color: red;
+        
+    }
+    .aaa{
+       
+           font-size: 10px;
+           color: green;
+       }
+  /*마지막 명령으로 덮음
+    아랫쪽이  우선순위*/
+
+
+
+/*
+@는 css에서 사용하는 규칙을 나타내는 기호 
+->@font-face :사용자가 정의 폰트를 내 웹사이트에서 사용할수 있게 정의함
+
+
+*/
+
+    @font-face {
+    font-family: 'YoonChildfundkoreaMinGuk';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2408@1.0/YoonChildfundkoreaMinGuk.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/*
+
+*{
+     /*글꼴모양*/
+     font-family: 'YoonChildfundkoreaMinGuk';
+    font-size: 20px;
+
+
+*/
+
+
+
+
+/*모든 요소선택자보다 클래스선택자가 더 우선순위가 있음*/
+
+    </STYle>
+</head>
+<body>
+    <H1>css(Cascading style sheets)</H1>
+    <pre>
+        마크업 언어(HTML)가 실제로 화면에 
+        표시(모양 , 글씨체 , 색상 , 크기)되는 방법을 기술하는 언어.
+
+    </pre>
+
+    <hr>
+    <h1>css selector(선택자)</h1>
+    <pre class="tb" id="test">
+        현재 html 문서 내에서 특정한 요소를 선택하는 문자 또는 문자열.
+        <!--요소란 html태그를 이용해서 만든 모든 것 
+            요소 = elemenet       
+        -->
+        ==스타일을 적용하고자 하는 요소를 선택하는 방법
+    </pre>
+
+    <hr>
+<h3>태그 선택자</h3>
+<pre>
+    현재 html 문서 내에 같은 태그를 선택하는 선택자.
+
+    [작성법] 
+    
+    태그명 {
+        css 코드;
+    }
+    ex_
+    pre{
+        font-size :50px;
+    }
+</pre>
+
+
+    <div>
+        <strong>strong태그에 작성된 내용</strong> <br>
+        <span>span태그에 작성된 내용</span>
+        <ul>
+            <li>
+                <strong>strong 태그에 작성된 내용</strong>
+            </li>
+            <li>
+                <span>span태그에 작성된 내용</span>
+            </li>
+        </ul>
+
+    </div>
+
+    <hr><hr>
+    <h3>아이디 선택자</h3>
+    <pre>
+        html문서 내에서 id속성값이 일치하는 요소를 선택하는 선택자
+
+        [작성법 ]
+
+        #id속성값 {
+            css 코드;
+        # == id
+        } 
+    </pre>
+
+    <ol>
+        <!-- id 속성값은 하나의 html 문서 내에서 절대 중복되면 안됩니다.-->
+        <li id="li-1">
+        id선택자 테스트1
+        </li>
+        <li id="li-2">
+        id선택자 테스트2
+        </li>
+        <li id="li-3">
+        id선택자 테스트3
+        </li>
+        <li id="li-4">
+        id선택자 테스트4
+        </li>
+        <li id="li-5">
+        id선택자 테스트5
+        </li>
+        
+    </ol>
+
+    <hr>
+
+    <h3>class 선택자</h3>
+    <pre>
+        html문서 내에서 같은 class 속성값을 가지는 태그를 모두 선택하는 선택자
+         클래스 선택자는 중복가능
+         [작성법]
+         .class 속성값 { css 코드;}
+
+         .==class
+    </pre>
+
+    <ul>
+        <!-- test1 aaa  클래스 이름 2개줌-->
+       <li class="test-1 aaa">클래그 선택자테스트</li>
+       <li class="test-2">클래그 선택자테스트</li>
+       <li class="test-1">클래그 선택자테스트</li>
+       <li class="test-2 aaa">클래그 선택자테스트</li>
+       <li class="test-1">클래그 선택자테스트</li>
+    </ul>
+
+    <hr>
+    <h3>모든 요소 선택자</h3>
+    <pre>
+        모든 요소를 선택하는 선택자
+        
+        [작성법]
+
+        *{ 
+        css 코드 ; 
+        }
+    </pre>
+</body>
+</html>

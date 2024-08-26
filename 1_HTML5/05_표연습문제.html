@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>05_표연습문제</title>
+    <style>
+/* css 영역 */
+thead{background-color: aqua;
+}
+tbody{
+    background-color: orange;
+}
+tfoot{
+    background-color: yellow;
+}
+
+tbody th, tfoot th {background-color: orangered;}
+
+.a{background-color: aquamarine;}
+.b th, .c th{background-color: orangered;}
+.b td{background-color: orange}
+.c td{background-color: yellow;}
+
+    </style>
+</head>
+<body>
+    <table border="1">
+        <thead class="a">
+            <tr>
+                <th colspan="5">하수정 컬렉션</th>
+            </tr>
+        </thead>
+        <tbody class="b">
+            <tr>
+                <!-- 열 개수가 다 일정해야하는것은 아님
+                 컬럼값이 있는것만 넣자 -->
+                <th rowspan="5">제품리스트</th>
+                <th>코드</th>
+                <th>분류</th>
+                <th>가격</th>
+                <th>구매가능개수</th>
+            </tr>
+            <tr>
+               
+               <td>01-468</td>
+               <td>여름</td>
+               <td>200.000</td>
+               <td>1068</td>
+            </tr>
+            <tr>
+                
+                <td>01-223</td>
+                <td>여름</td>
+                <td>200.000</td>
+                <td>1068</td>
+             </tr>
+             <tr>
+                
+                <td>01-468</td>
+                <td>가을</td>
+                <td>200.000</td>
+                <td>1068</td>
+             </tr>
+             <tr>
+                
+                <td>01-468</td>
+                <td>겨울</td>
+                <td>200.000</td>
+                <td>1068</td>
+             </tr>
+             
+        </tbody>
+        <tfoot class="c">
+            <tr>
+                <th colspan="3">총합</th>
+                <td>800.000</td>
+                <td>3786</td>
+            </tr>
+        </tfoot>
+
+
+    </table>
+
+<hr>
+
+<table border="1">
+    <thead>
+        <tr>
+            <th colspan="5">하수정 컬렉션</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th rowspan="5">제품리스트</th>
+            <th>코드</th>
+            <th>분류</th>
+            <th>가격</th>
+            <th>구매가능개수</th>
+        </tr>
+        <tr>
+            <td>01-468</td>
+            <td>여름</td>
+            <td>200000</td>
+            <td>1068</td>
+        </tr>
+        <tr>
+            <td>01-468</td>
+            <td>여름</td>
+            <td>200000</td>
+            <td>1068</td>
+        </tr>
+        <tr>
+            <td>01-468</td>
+            <td>여름</td>
+            <td>200000</td>
+            <td>1068</td>
+        </tr>
+        <tr>
+            <td>01-468</td>
+            <td>여름</td>
+            <td>200000</td>
+            <td>1068</td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+            <th colspan="3">총합ㅂ</th>
+            <td>ddd원</td>
+            <td>3786</td>
+        </tr>
+    </tfoot>
+</table>
+
+</body>
+</html>

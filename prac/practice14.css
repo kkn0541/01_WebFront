@@ -1,0 +1,85 @@
+*{
+  box-sizing: border-box;
+  border: 1px solid black;
+}
+
+main{
+  width: 1140px;
+  margin: auto;
+}
+header{
+  height: 200px;
+  display: flex;
+}
+
+#home-logo{
+  width: 120px;
+}
+
+header>section:nth-last-of-type(1),
+header>section:nth-last-of-type(3){
+  flex-basis: 15%;
+}
+
+header>section:nth-last-of-type(2){
+  flex-basis: 70%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+/*로고 가운데로*/
+header>section:nth-of-type(1){
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*검색창 영역*/
+.search-area{
+  width: 500px;
+}
+
+.search-area fieldset{
+  border: 2px solid violet;
+  border-radius: 5px;
+  padding:2px;
+  display: flex;
+}
+
+nav{
+  height: 50px;
+  border: 1px 2px solid black;
+}
+
+nav >ul{
+list-style: none;
+display: flex;
+margin:0;
+padding:00;
+height: 100%;
+}
+
+nav li {
+  flex-basis: 150px;
+}
+
+nav a{
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  color: black;
+  display: block;
+  height: 100%;
+
+  text-align: center;
+  line-height: 50px;
+  transition-duration: 0.2s;
+  border-radius: 5px;
+
+  
+}
+nav a:hover{
+  background-color: blue;
+  color: white
+}

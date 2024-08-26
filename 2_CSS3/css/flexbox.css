@@ -1,0 +1,235 @@
+
+
+
+div{
+    border : 1px solid black;
+    box-sizing: border-box;
+    /* content + padding + border 합으로 width/height 지정 */
+}
+
+
+.item{
+    width: 75px;
+    height: 75px;
+}
+
+
+.item1{background-color: red;}
+.item2{background-color: orangered;}
+.item3{background-color: orange;}
+.item4{background-color: yellow;}
+.item5{background-color: yellowgreen;}
+.item6{background-color: green;}
+.item7{background-color: lightblue;}
+.item8{background-color: blue;}
+.item9{background-color: violet;}
+
+
+/*flexbox중 부모요소 */
+.flex-container{
+    height: 800px;
+    
+
+    /*부모요소에게 주는 css속성
+      이요소를 flexbox로 만들겠다.*/
+    /*필수*/
+    display: flex;
+    /*자식요소들은 기본적으로 메인축이 row가 됨 (세로에서 가로로 바뀜)*/
+
+     /* flex-direction */
+     /* (  @@부모 전용 속성 @@ ) */
+    /*메인축의 방향과 시작위치를 지정하는 속성*/
+
+    /* 행 방향으로 메인축 삼겟다 (가로, 기본값)*/
+     /* flex-direction: row;  */
+    /*ctrl + / ->커서 있는 라인 주석처리 */
+
+    /*열 방향이 메인축이됨 (세로방향)*/
+     /* flex-direction: column;  */
+
+    /*행방향 메인축(가로방향) + 순서 반대로 뒤집힘*/
+    /* flex-direction: row-reverse; */
+
+    /*열방향 메인축(세로방향) + 순서 반대로 뒤집힘*/
+    /* flex-direction: column-reverse; */
+
+    /* flex-wrap */
+     /* (부모 전용 속성) */
+    /*내부 item들을 포장하는 속성
+        item들이 강제로 한줄에 배치되게 할지 ,
+        한줄을 벗어나 여러 줄로 배치할 것인지 지정
+    */
+    /* item을 한줄로 배치-기본값(부모 사이즈가 작아져도 자식들은 무조건 한줄안에 들어가겟다) */
+    /* flex-wrap : nowrap */
+    
+    /*item을 여러줄로 배치(부모사이즈가 바뀌면 사이즈 유지하면서 다음줄로 내려감*/
+    /* flex-wrap: wrap; */
+   
+    /*item을 여러줄로 배치(뒤에서 배치*/
+    /* flex-wrap: wrap-reverse; */
+
+
+    /*메인축을 열방향으로 바꾸고 아래내용 다시 테스트해보기*/
+    /* flex-direction: column; */
+
+
+
+
+    /*자주씀 , 중요@#!@#*/
+    /*justfy-content(부모 전용 속성)*/
+    /*메인축 방향으로 item 정렬방법을 조정함*/
+
+    /*메인축 방향으로 앞에서 부터 정렬(기본값)*/
+    /* justify-content: flex-start; */
+   
+    /*메인축 방향으로 뒤에 붙어서 정렬*/
+    /* justify-content: flex-end; */
+
+    /*메인축 방향으로 가운데 정렬*/
+    /* justify-content: center; */
+    /*item 주위에 메인축 방향 양쪽으로 일정한 크기의 공간을 추가 
+      ->양끝은 조금 , item 중간 사이사이는 넓게 떨어져있다.
+      -> 브라우저 크기에 따라 변함*/
+
+    /* justify-content: space-around; */
+
+    /*item이 메인축 내에서 동일한 간격을 가짐 */
+    /*처음 끝 여백도 동일*/
+    /* justify-content: space-evenly; */
+
+    /*양끝을 붙인 상태에서 item들의 간격을 일정하게 정렬*/
+    /* justify-content: space-between ; */
+
+    /*align-items(부모 전용 속성)*/
+    /*item들을 교차축 방향으로 정렬하는 방법을 지정하는 속성*/
+    /*교차축 앞에서 부터 정렬(기본값)*/
+    /* align-items: flex-start; */
+
+    /*교차축의 맨 아래로 이동*/
+    /*교차축 끝에 붙어섲 정렬*/
+    align-items: flex-end;
+
+    /*교차축 가운데 정렬*/
+    /* align-items: center; */
+}
+
+/*요소 정가운데 배치하기*/
+
+#con{
+    width: 450px;
+    height: 450px;
+    display: flex;
+    /*메인축 가운데 정렬(가로)*/
+    justify-content: center;
+    /*교차축 가운데 정렬(세로)*/
+    align-items: center;
+}
+
+#center{
+    width: 80px;
+    height: 80px;
+    background-color: red;
+}
+
+/*item(자식)에게 주는 flex속성*/
+.basis-20{
+    /* auto(기본값)
+       요소 본래의 크기만큼만을 가짐
+       위에서 지정한 만큼만 
+       
+       0 본래 요소의 크기중 contens 영역만을 남겨두고 차지하는 영역 없음
+       */
+    /* flex-basis: auto; */
+
+    /* 0 이면 차지하느 영역없음 content 만큼만*/
+    flex-basis :0;
+
+    /*부모의 몇퍼센트만큼 점유하겠다.*/
+    flex-basis: 20%;
+}
+
+/*부모의 몇퍼센트만큼 점유하겠다.*/
+.basis-30{
+    flex-basis: 30%;
+}
+
+/*부모의 몇퍼센트만큼 점유하겠다.*/
+.basis-50{
+    flex-basis: 50%;
+}
+
+/*flex-grow*/
+/*0(기본값)
+  item이 추가적인 가용공간을 차지하지 않음
+  자신의 초기 크기만을 유지
+  설정값은 여백의 비율로 적용됨*/
+.grow1{
+    flex-grow: 1;
+}
+
+.grow2{
+    flex-grow:2;
+}
+
+.grow3{
+    flex-grow: 1;
+}
+
+/*flex-shrink
+1(기본값) :
+컨테이너 크기가 줄어들면 
+다른 항목들과 함께 비율적으로 
+축소될수있음을 의미 
+
+*/
+
+.shrink1{
+    flex-shrink: 1;
+}
+
+.shrink2{
+    flex-shrink: 0;
+    /*0: 항목이(item)줄어들지 않음을 의미 
+    ->컨테이너의 크기가 줄어들어도 비율이 축소되지 않음*/
+    
+}
+
+/*flex */
+.flex-test1{
+     flex:1; 
+    /*flex-grow :1;
+      flex-shrink 1;
+      flex-basis :0%;
+    
+    */
+}
+.flex-test2{
+/*       grow  shirink  basis*/
+     flex:1       1      auto; 
+
+}
+
+.flex-test3{
+
+    flex:500px;
+    /*
+    grow :1 ;
+    shrink 1;
+    basis: 500px;
+    - item의 기본크기가 500px로 설정됨
+    */
+}
+
+/*order
+   기본값 0
+    -기본 순서를 유지함
+    -정수값을 가질수 있고 양수 ,0 , 음수 가능 
+    -값이 작을수록 앞부분으로 이동함
+*/
+/*a가 마지막으로 밀림*/
+.order:nth-child(1){order:3;}
+
+/*b가 두번째 밀림*/
+.order:nth-child(2){order:2;}
+/*c가 첫번째로*/
+.order:nth-child(3){order:1;}

@@ -1,0 +1,28 @@
+
+/*5순위*/
+div{
+    width: 200px ; 
+    height: 200px ; 
+    background-color: red !important;
+}
+
+/*4순위 클래스 선택자*/
+.cls1{
+    background-color: antiquewhite;
+}
+
+.cls1{
+    background-color: palegoldenrod;
+}
+/*동일한 우선순위에서 마지막에 작성된 설정값이 적용됨*/
+
+
+/*3순위 아이디 선택자*/
+#test1{
+    height: 100px;
+    background-color: black;
+    color: white;
+}
+
+
+

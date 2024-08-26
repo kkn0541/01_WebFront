@@ -1,0 +1,137 @@
+.area1 {background-color: red;}
+.area2 {background-color: orange;}
+.area3 {background-color: yellow;}
+.area4 {background-color: green;}
+.area5 {background-color: blue;}
+
+
+/*div 형식을 inline으로 변경 ( 위아래에서 옆으로 )*/
+.inline{
+    display: inline;
+}
+
+.block{
+    display: block;
+    width: 150px;
+    height: 150px;
+}
+
+.inline-block {
+ /*   display: none;*/
+ display: inline-block;
+}
+
+
+/*감싸는 영역 요소*/
+#container-1{
+    border: 3px solid black;
+    width: 323px;
+    height: 472px;
+
+}
+
+/*내부의 영역을 분할할 요소*/
+.div-1{
+ border: 1px dashed violet;
+ /*부모 height의 50퍼만 먹겠다*/
+ height:50%;
+
+}
+
+/*2개중에 첫번째선택*/
+#container-1> .div-1:first-of-type{
+background-color: red;
+height: 30%;
+
+
+}
+/*2개중에 마지막번 선택*/ 
+#container-1> .div-1:last-of-type{
+    background-color: blue;
+    height: 70%;
+    
+}
+
+/*block 형식의 요소는 별도의 width가 지정되지 않으면 항상 100%*/
+
+
+
+/*  부모크기먼저 지정  */
+#container-2 {
+
+    border: 1px solid black;
+    background-color: aqua;
+    width: 323px;
+    height: 472px;
+
+}
+
+#container-2 >.div-2:first-of-type{
+    background-color: violet;
+    height: 20%;
+}
+#container-2 >.div-2:last-of-type{
+    background-color: bisque;
+    height: 50%;
+}
+
+#container-2 > div:nth-child(2n){
+    
+    background-color: red;
+    height: 30%;
+
+}
+
+/*
+#container-2 >.div-2:nth-of-type(1){
+    background-color: violet;
+    height: 20%;
+}
+#container-2 >.div-2:nth-of-type(2){
+    background-color: bisque;
+    height: 50%;
+}
+
+#container-2 > div:nth-of-type(3){
+    
+    background-color: red;
+    height: 30%;
+
+}
+    */
+
+    /*좌우 분할*/
+
+    #container-3 {
+        width: 400px;
+        height: 200px;
+        border : 5px solid red;
+    }
+
+    .div-3{
+        width: 50%;
+        height: 100%;
+        display: inline-block;
+        /*높이 필수*/
+
+    }
+#container-3 > .div-3:first-of-type{
+    background-color: pink;
+}
+#container-3 > .div-3:last-of-type{
+    background-color: blue;
+}
+
+.div-4{
+    border: 3px solid black;
+    height: 100px;
+}
+
+#test4{
+    background-color: brown;
+    /*display: none;*/
+
+    visibility: hidden;
+    /*visibility 투명하게보임, 
+    diplay : none  아얘 안보임   */
+}

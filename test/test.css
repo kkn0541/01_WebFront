@@ -1,0 +1,40 @@
+
+*{
+  box-sizing: border-box;
+  /* border: 1px solid black; */
+}
+
+
+body{
+  margin: 0;
+ 
+}
+
+main{
+  width: 1140px;
+  /*메인 가운데 정렬*/
+  margin: auto;
+}
+header{
+  height: 100px;
+ 
+  
+}
+
+.main1{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#box3{
+  box-sizing: border-box;
+  width: 200px;
+  height: 200px;
+  border: 4px solid black;
+  background-color: beige;
+  
+
+  
+  transition-duration: 0.5s;
+}

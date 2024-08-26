@@ -1,0 +1,93 @@
+/* css 파일
+파일전체가 <style> 태그 내부라고 생각하면 된다.
+*/
+
+/*기본 속성 선택자*/
+div[name="name-1"] {
+/* div 속성중 name 값이 name-1 인값만 골라서 */
+    background-color: red;
+}
+p[name='name-1']{
+    background-color: green;
+}
+
+/*선택자 생략가능*/
+[name='name-2']{
+    background-color: blue;
+}
+/*자식 선택자*/
+
+#parent-ul > li{
+    background-color: orange;
+}
+/* 자식밑에 또 자식*/
+#parent-ul > li > span{
+    background-color:red;
+}
+
+/*후손(자손)선택자*/
+/*test-div의 모든 p태그*/
+#test-div p{
+    background-color: yellowgreen;
+}
+
+/*후손과 자식 선택자 구분필요*/
+
+/*반응 선택자*/
+.div-cls{
+    border: 1px solid black;
+    width :200px;
+    height: 200px;
+    background-color: gray;
+
+    /*아랫쪽 요소와의 간격*/
+    margin-bottom: 30px;
+    /*요소에 마우스 커서가 올라오면 손가락 모양으로 변경*/
+    cursor: pointer;
+
+}
+#active-test:active{
+background-color: yellow;
+}
+#hover-test:hover{
+    background-color: pink;
+    width:230px;
+    height: 230px;
+}
+
+#hover-test{
+    transition-duration: 0.5s;
+    /*트랜지션 - 점진적으로 변화*/
+}
+
+/*상태선택자*/
+#focus-test:focus{
+    background-color: red;
+}
+
+input[name="fruits"]:checked{
+    width: 30px;
+    height: 30px;
+
+    /*빨간색 안먹힘*/
+    background-color: red; 
+    /*radio , checkbox 는 크기를 제외한 스타일 적용불가*/
+
+}
+
+#test-div2 > input:enabled {
+background-color: lightgreen;
+
+}
+
+#test-div2 > input:disabled{
+    background-color: papayawhip;
+}
+/*동위 선택자*/
+#div1+div {
+    background-color: olive;
+}
+
+#div3~div{
+    background-color: blue;
+}

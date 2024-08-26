@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>회원가입</h1>
+
+    <form action="">
+        <fieldset>
+            <table border="1">
+                <tr>
+                    <th>id</th>
+                    <td><input type="text" placeholder="아이디 10글자 이내"></td>
+                    <td><button id="btn">중복확인</button></td>
+                    <script>
+
+                        document.getElementById("btn").addEventListener("click",function()
+                        {
+                            alert("사용가능")
+                        })
+
+                       
+                    </script>
+                </tr>
+                <tr>
+                    <th>비밀번호</th>
+                    <td colspan="2"><input type="password" placeholder="영문 , 숫자 , 특수묹, 포함 9자이상" size="35" ></td>
+                    
+                </tr>
+                <tr>
+                    <th>비밀번호확인</th>
+                    <td colspan="2" ><input type="password" size="35"> </td>
+                    
+                </tr>
+                <tr>
+                    <th>email</th>
+                    <td><input type="email"></td>
+                    <td><select name="" id="">
+                        <option value="">직접입력</option>
+                        <option value="">직접입력2</option>
+                    </select></td>
+                </tr>
+
+
+            </table>
+
+
+
+<br><br><br>
+
+
+
+
+
+
+
+
+            <legend>필수입력정보</legend>
+            <b>id</b><input type="text" placeholder="아이디 10글자 이내"><button>중복확인</button><br>
+            <b>비밀번호</b><input type="password" placeholder="영문 , 숫자 , 특수묹, 포함 9자이상"><br>
+            <b>비밀번호확인</b><input type="password"><br>
+            <b>EMAIL</b> <input type="email">
+                <select name="" id="">
+                    <option value="">직접입력</option>
+                    <option value="">직접입력2</option>
+                </select>
+        </fieldset>
+
+        <fieldset>
+            <legend>
+                추가정보
+            </legend>
+            프로필사진 <input type="file"> <br>
+            <label for="m">
+            성별 : <input type="radio" id="m"> 남자
+            </label>
+            <label for="w">
+                <input type="radio" id="w">여자
+            </label> <br>
+
+            생년월일 : <input type="date">
+                <br>
+            취미
+            <label for="bbb">
+                <input type="checkbox" id="bbb"> 야구
+            </label>
+            <label for="bbbb">
+                <input type="checkbox" id="bbbb"> 농구
+            </label>
+            <label for="sss">
+                <input type="checkbox" id="sss"> 축구
+            </label>
+            <br>
+            <label for="ssss">
+                <input type="checkbox" id="ssss"> 공부
+            </label>
+            <label for="mmm">
+                <input type="checkbox" id="mmm"> 음악감상
+            </label>
+            <br>
+            기타<input type="text">
+
+            자기소개
+            <br>
+            <textarea rows="5" cols="70" style="resize: none;"
+            id="" placeholder="">
+         </textarea>
+
+
+        </fieldset>
+
+     
+          <button type="">회원가입</button>
+            <button type="reset">다시입력</button>
+            <button type="">이전으로</button>
+
+
+
+
+
+
+    </form>
+</body>
+</html>
