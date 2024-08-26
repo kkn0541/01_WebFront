@@ -88,4 +88,5 @@ q8(1,2,3);
 
 function q9(){
   
+  console.log("깃테스트 확원에서 작성abc");
 }
